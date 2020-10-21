@@ -63,6 +63,7 @@ def monitor(site,delay=1, limit=math.inf,silent=False, plot=False):
                 duration = time.time() - start
                 upTime += duration
                 start -= duration
+                print("start time:", start)
                 ticks+=makeTicks(duration,delay,1)
                 print(f"Server is down. Uptime was {duration:.1f} secconds")
             connected = False
