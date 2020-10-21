@@ -17,3 +17,4 @@ with smtplib.SMTP(server,port) as server:
     message = open('email.txt').read()
     server.sendmail(fromEmail,toEmail,message)
 print("Sent")
+
