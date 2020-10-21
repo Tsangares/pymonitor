@@ -6,6 +6,8 @@ import statistics as stat
 def isConnected(response):
     return 'Request timed out' not in str(response._responses[0])
 def makeTicks(duration,delay,value):
+    if duration > 10**5:
+        raise Exception("Duration error.")
     return [value for _ in range(int(duration/delay))]
 
 def monitorUp(site,delay,silent=False):
