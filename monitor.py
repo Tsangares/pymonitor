@@ -45,7 +45,7 @@ def monitor(site,delay=1, limit=math.inf,silent=False, plot=False):
     start = time.time()
     upTime = 0.0
     downTime = 0.0
-    totalDuration = 0
+    duration=totalDuration = 0
     ticks=[]
     up=down=None
     i=0
