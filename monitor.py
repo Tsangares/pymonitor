@@ -71,8 +71,8 @@ def monitor(site,delay=1, limit=math.inf,silent=False, plot=False):
             if not connected:
                 down.start()
                 down.join()
-                downTime += duration
                 duration = time.time() - start
+                downTime += duration
                 start -= duration
                 ticks+=makeTicks(duration,delay,0)
             connected = True            
